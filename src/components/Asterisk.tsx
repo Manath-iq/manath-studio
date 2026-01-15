@@ -12,7 +12,7 @@ const Bar = ({ rotation }: { rotation: [number, number, number] }) => (
       roughness={0.2}
       metalness={0.1}
       emissive="#ffffff" // Max emissive for Bloom
-      emissiveIntensity={1.2}
+      emissiveIntensity={1.0}
     />
   </mesh>
 );

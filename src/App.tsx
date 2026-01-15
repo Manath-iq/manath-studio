@@ -33,12 +33,13 @@ const App: React.FC = () => {
         <Scene scrollRef={scrollRef} />
 
         {/* Content Overlay - mix-blend-difference ensures text inverts when over the white 3D model */}
-        <main className="relative z-10 w-full pointer-events-none">
+        {/* We apply mix-blend-difference to the ENTIRE main container so all text blends against the scene */}
+        <main className="relative z-10 w-full pointer-events-none mix-blend-difference">
 
           {/* SECTION 1: HERO */}
           <section className="h-screen w-full flex flex-col justify-center px-6 md:px-20 max-w-7xl mx-auto relative">
             {/* mix-blend-difference container */}
-            <div className="flex flex-col items-start space-y-2 mix-blend-difference pointer-events-auto">
+            <div className="flex flex-col items-start space-y-2 pointer-events-auto">
               <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif italic text-white tracking-wide">
                 <StaggerText text="creativity studio" />
               </h1>
@@ -47,7 +48,7 @@ const App: React.FC = () => {
               </h2>
             </div>
 
-            <div className="absolute bottom-12 left-6 md:left-20 flex items-center gap-4 animate-bounce mix-blend-difference">
+            <div className="absolute bottom-12 left-6 md:left-20 flex items-center gap-4 animate-bounce">
               <span className="font-serif italic text-sm text-gray-300">scroll to explore</span>
               <ArrowDown className="w-4 h-4 text-white" />
             </div>
@@ -56,7 +57,7 @@ const App: React.FC = () => {
           {/* SECTION 2: THE JOKE */}
           <section className="h-[150vh] w-full flex items-center justify-center px-6 relative">
             {/* Removed background card, using pure text with difference blend mode */}
-            <div className="max-w-3xl text-center mix-blend-difference pointer-events-auto">
+            <div className="max-w-3xl text-center pointer-events-auto">
               <div className="text-3xl md:text-6xl font-serif italic text-white leading-tight">
                 <StaggerText text='"Тут на самом деле больше ничего нет, можешь дальше не листать..."' />
               </div>
@@ -68,7 +69,7 @@ const App: React.FC = () => {
 
           {/* SECTION 3: FOOTER / CONTACT */}
           <section className="h-[80vh] w-full flex flex-col items-center justify-center relative pb-20">
-            <div className="text-center space-y-8 z-20 mix-blend-difference pointer-events-auto">
+            <div className="text-center space-y-8 z-20 pointer-events-auto">
               <p className="font-serif italic text-2xl md:text-3xl text-white">
                 <TextReveal>ну ладно, вот мой контакт</TextReveal>
               </p>
@@ -85,7 +86,7 @@ const App: React.FC = () => {
               </a>
             </div>
 
-            <div className="absolute bottom-10 w-full text-center mix-blend-difference">
+            <div className="absolute bottom-10 w-full text-center">
               <p className="text-xs font-sans text-gray-400 uppercase tracking-widest">
                 © {new Date().getFullYear()} Manath. All rights reserved.
               </p>
