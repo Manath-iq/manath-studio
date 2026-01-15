@@ -14,9 +14,9 @@ export const Scene: React.FC<SceneProps> = ({ scrollRef }) => {
       <Canvas
         dpr={[1, 2]}
         camera={{ position: [0, 0, 10], fov: 40 }}
-        gl={{ antialias: false, alpha: false, stencil: false, depth: true }} // optimizations for postprocessing
+        gl={{ antialias: false, alpha: true, stencil: false, depth: true }} // optimizations for postprocessing
       >
-        <color attach="background" args={['#000000']} />
+        {/* Transparent background so CSS bg-black shows through */}
 
         {/* High intensity lights for white appearance */}
         <ambientLight intensity={2} />

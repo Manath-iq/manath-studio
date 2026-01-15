@@ -39,7 +39,7 @@ const App: React.FC = () => {
           <section className="h-screen w-full flex flex-col justify-center px-6 md:px-20 max-w-7xl mx-auto relative">
             {/* mix-blend-difference container */}
             <div className="flex flex-col items-start space-y-2 mix-blend-difference pointer-events-auto">
-              <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif italic text-white tracking-wide overflow-hidden">
+              <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif italic text-white tracking-wide">
                 <StaggerText text="creativity studio" />
               </h1>
               <h2 className="text-4xl md:text-7xl lg:text-8xl font-sans font-black tracking-tighter text-white">
