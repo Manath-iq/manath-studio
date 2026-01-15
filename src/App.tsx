@@ -22,13 +22,13 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white selection:bg-white selection:text-black cursor-default">
-      
+
       {/* 3D Background - Fixed */}
       <Scene scrollRef={scrollRef} />
 
       {/* Content Overlay - mix-blend-difference ensures text inverts when over the white 3D model */}
       <main className="relative z-10 w-full pointer-events-none">
-        
+
         {/* SECTION 1: HERO */}
         <section className="h-screen w-full flex flex-col justify-center px-6 md:px-20 max-w-7xl mx-auto">
           {/* mix-blend-difference container */}
@@ -40,10 +40,10 @@ const App: React.FC = () => {
               by manath
             </h2>
           </div>
-          
+
           <div className="absolute bottom-12 left-6 md:left-20 flex items-center gap-4 animate-bounce mix-blend-difference">
-             <span className="font-serif italic text-sm text-gray-300">scroll to explore</span>
-             <ArrowDown className="w-4 h-4 text-white" />
+            <span className="font-serif italic text-sm text-gray-300">scroll to explore</span>
+            <ArrowDown className="w-4 h-4 text-white" />
           </div>
         </section>
 
@@ -66,10 +66,10 @@ const App: React.FC = () => {
             <p className="font-serif italic text-2xl md:text-3xl text-white">
               ну ладно, вот мой контакт
             </p>
-            <a 
-              href="https://t.me/manath" 
-              target="_blank" 
-              rel="noreferrer"
+            <a
+              href="https://t.me/manath"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-block block"
             >
               <span className="text-7xl md:text-[10rem] leading-none font-sans font-black tracking-tighter text-white transition-all duration-300">
