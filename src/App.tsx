@@ -30,7 +30,7 @@ const App: React.FC = () => {
       <main className="relative z-10 w-full pointer-events-none">
 
         {/* SECTION 1: HERO */}
-        <section className="h-screen w-full flex flex-col justify-center px-6 md:px-20 max-w-7xl mx-auto">
+        <section className="h-screen w-full flex flex-col justify-center px-6 md:px-20 max-w-7xl mx-auto relative">
           {/* mix-blend-difference container */}
           <div className="flex flex-col items-start space-y-2 mix-blend-difference pointer-events-auto">
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif italic text-white tracking-wide">
@@ -81,7 +81,7 @@ const App: React.FC = () => {
 
           <div className="absolute bottom-10 w-full text-center mix-blend-difference">
             <p className="text-xs font-sans text-gray-400 uppercase tracking-widest">
-              © 2024 Manath. All rights reserved.
+              © {new Date().getFullYear()} Manath. All rights reserved.
             </p>
           </div>
         </section>
